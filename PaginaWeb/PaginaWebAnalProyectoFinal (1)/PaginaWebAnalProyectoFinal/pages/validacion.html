@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DemographIQ | Validación</title>
+
+  <link rel="stylesheet" href="../style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="../js/script.js" defer></script>
+  <link rel="icon" type="image/png" href="../logo.png">
+  <script type="module" src="../js/i18n.js" defer></script>
+<script type="module" src="../js/script.js" defer></script>
+
+</head>
+
+<body>
+
+<header>
+  <div class="header-wrapper">
+
+    <!-- IZQUIERDA -->
+    <div class="header-left">
+      <div class="logo">Demograph<span>IQ</span> Analytics</div>
+    </div>
+
+    <!-- CENTRO: NAV DESKTOP -->
+    <nav id="desktopMenu" class="nav-desktop">
+      <a href="../index.html" class="bubbles"><span class="text" data-i18n="nav_home">Inicio</span></a>
+      <a href="simulador.html" class="bubbles"><span class="text" data-i18n="nav_simulator">Simulador</span></a>
+      <a href="validacion.html" class="bubbles"><span class="text" data-i18n="nav_validation">Validación</span></a>
+      <a href="nosotros.html" class="bubbles"><span class="text" data-i18n="nav_about">Nosotros</span></a>
+      <a href="contacto.html" class="bubbles"><span class="text" data-i18n="nav_contact">Contacto</span></a>
+    </nav>
+
+    <!-- DERECHA: IDIOMA + HAMBURGUESA -->
+    <div class="header-right">
+      <select id="language">
+        <option value="es">🇦🇷 Español</option>
+        <option value="pt">🇧🇷 Português</option>
+        <option value="en">🇬🇧 English</option>
+      </select>
+
+      <button class="menu-toggle" id="menuToggle">☰</button>
+    </div>
+
+  </div>
+
+  <!-- MENÚ MOBILE -->
+  <nav id="mobileMenu" class="nav-mobile">
+    <a href="index.html" data-i18n="nav_home">Inicio</a>
+    <a href="./pages/simulador.html" data-i18n="nav_simulator">Simulador</a>
+    <a href="./pages/validacion.html" data-i18n="nav_validation">Validación</a>
+    <a href="./pages/nosotros.html" data-i18n="nav_us">Nosotros</a>
+    <a href="./pages/contacto.html" data-i18n="nav_contact">Contacto</a>
+  </nav>
+</header>
+
+
+<section class="validacion">
+
+  <h2 data-i18n="val_title">Validación del Modelo LS</h2>
+
+  <p data-i18n="val_description">
+    Los modelos lineales fueron ajustados mediante mínimos cuadrados (LS) utilizando datos históricos 1900–2025. 
+    El siguiente gráfico muestra el coeficiente de determinación (R²) para cada país, indicando la calidad del ajuste.
+  </p>
+
+  <canvas id="graficoValidacion"></canvas>
+
+  <h3 data-i18n="val_table_title">Resumen de Parámetros del Modelo</h3>
+
+  <table id="tablaModelos">
+    <thead>
+      <tr>
+        <th data-i18n="val_col_country">País</th>
+        <th data-i18n="val_col_intercept">Intercepto (a)</th>
+        <th data-i18n="val_col_slope">Pendiente (b)</th>
+        <th data-i18n="val_col_r2">R²</th>
+        <th data-i18n="val_col_rmse">RMSE</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- Se completa automáticamente desde script.js -->
+    </tbody>
+  </table>
+
+</section>
+
+
+<footer>
+  <p data-i18n="footer_text">© 2025 DemographIQ Analytics</p>
+</footer>
+
+</body>
+</html>

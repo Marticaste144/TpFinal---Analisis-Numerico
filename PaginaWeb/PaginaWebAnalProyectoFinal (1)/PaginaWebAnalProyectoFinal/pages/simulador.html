@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DemographIQ | Simulador</title>
+
+  <link rel="stylesheet" href="../style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="../js/script.js" defer></script>
+  <link rel="icon" type="image/png" href="../logo.png">
+  <script type="module" src="../js/i18n.js" defer></script>
+<script type="module" src="../js/script.js" defer></script>
+
+</head>
+
+<body>
+<header>
+  <div class="header-wrapper">
+
+    <!-- IZQUIERDA -->
+    <div class="header-left">
+      <div class="logo">Demograph<span>IQ</span> Analytics</div>
+    </div>
+
+    <!-- CENTRO: NAV DESKTOP -->
+    <nav id="desktopMenu" class="nav-desktop">
+      <a href="../index.html" class="bubbles"><span class="text" data-i18n="nav_home">Inicio</span></a>
+      <a href="simulador.html" class="bubbles"><span class="text" data-i18n="nav_simulator">Simulador</span></a>
+      <a href="validacion.html" class="bubbles"><span class="text" data-i18n="nav_validation">Validación</span></a>
+      <a href="nosotros.html" class="bubbles"><span class="text" data-i18n="nav_about">Nosotros</span></a>
+      <a href="contacto.html" class="bubbles"><span class="text" data-i18n="nav_contact">Contacto</span></a>
+    </nav>
+
+    <!-- DERECHA: IDIOMA + HAMBURGUESA -->
+    <div class="header-right">
+      <select id="language">
+        <option value="es">🇦🇷 Español</option>
+        <option value="pt">🇧🇷 Português</option>
+        <option value="en">🇬🇧 English</option>
+      </select>
+
+      <button class="menu-toggle" id="menuToggle">☰</button>
+    </div>
+
+  </div>
+
+  <!-- MENÚ MOBILE -->
+  <nav id="mobileMenu" class="nav-mobile">
+    <a href="index.html" data-i18n="nav_home">Inicio</a>
+    <a href="./pages/simulador.html" data-i18n="nav_simulator">Simulador</a>
+    <a href="./pages/validacion.html" data-i18n="nav_validation">Validación</a>
+    <a href="./pages/nosotros.html" data-i18n="nav_us">Nosotros</a>
+    <a href="./pages/contacto.html" data-i18n="nav_contact">Contacto</a>
+  </nav>
+</header>
+
+
+<section class="simulador">
+
+  <h2 data-i18n="sim_title">Simulador de Crecimiento Poblacional</h2>
+
+  <p data-i18n="sim_description">
+    Seleccioná un país y un rango de años para proyectar la población con márgenes de incertidumbre.
+  </p>
+
+  <div class="inputs">
+
+    <label data-i18n="sim_label_country">País:</label>
+    <select id="pais">
+      <option value="Argentina" data-i18n="country_arg">Argentina</option>
+      <option value="Uruguay" data-i18n="country_uru">Uruguay</option>
+      <option value="Brasil" data-i18n="country_bra">Brasil</option>
+      <option value="Paraguay" data-i18n="country_par">Paraguay</option>
+      <option value="MERCOSUR" data-i18n="country_mercosur">MERCOSUR (Total)</option>
+    </select>
+
+    <label data-i18n="sim_label_start">Año inicial:</label>
+    <input type="number" id="anioInicio" value="2025" min="1900" max="2050">
+
+    <label data-i18n="sim_label_end">Año final:</label>
+    <input type="number" id="anioFin" value="2050" min="1900" max="2100">
+
+    <button id="simular" class="bubbles">
+      <span class="text" data-i18n="sim_button">Simular</span>
+    </button>
+
+  </div>
+
+  <div class="resultados">
+    <p id="output"></p>
+    <canvas id="grafico"></canvas>
+  </div>
+
+</section>
+
+<footer>
+  <p data-i18n="footer_text">© 2025 DemographIQ Analytics</p>
+</footer>
+
+</body>
+</html>
