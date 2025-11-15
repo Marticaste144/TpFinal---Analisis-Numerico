@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DemographIQ Analytics | Inicio</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" href="logo.png">
+  <script type="module" src="./js/i18n.js" defer></script>
+  <script type="module" src="./js/script.js" defer></script>
+
+</head>
+
+<body>
+
+<header>
+  <div class="header-wrapper">
+
+    <!-- IZQUIERDA -->
+    <div class="header-left">
+      <div class="logo">Demograph<span>IQ</span> Analytics</div>
+    </div>
+
+    <!-- CENTRO: NAV DESKTOP -->
+    <nav id="desktopMenu" class="nav-desktop">
+      <a href="index.html" class="bubbles" data-i18n="nav_home"><span class="text">Inicio</span></a>
+      <a href="./pages/simulador.html" class="bubbles" data-i18n="nav_simulator"><span class="text">Simulador</span></a>
+      <a href="./pages/validacion.html" class="bubbles" data-i18n="nav_validation"><span class="text">Validación</span></a>
+      <a href="./pages/nosotros.html" class="bubbles" data-i18n="nav_about"><span class="text">Nosotros</span></a>
+      <a href="./pages/contacto.html" class="bubbles" data-i18n="nav_contact"><span class="text">Contacto</span></a>
+    </nav>
+
+    <!-- DERECHA: IDIOMA + HAMBURGUESA -->
+    <div class="header-right">
+      <select id="language">
+        <option value="es">🇦🇷 Español</option>
+        <option value="pt">🇧🇷 Português</option>
+        <option value="en">🇬🇧 English</option>
+      </select>
+
+      <button class="menu-toggle" id="menuToggle">☰</button>
+    </div>
+
+  </div>
+
+  <!-- MENÚ MOBILE -->
+  <nav id="mobileMenu" class="nav-mobile">
+    <a href="index.html" data-i18n="nav_home">Inicio</a>
+    <a href="./pages/simulador.html" data-i18n="nav_simulator">Simulador</a>
+    <a href="./pages/validacion.html" data-i18n="nav_validation">Validación</a>
+    <a href="./pages/nosotros.html" data-i18n="nav_us">Nosotros</a>
+    <a href="./pages/contacto.html" data-i18n="nav_contact">Contacto</a>
+  </nav>
+</header>
+
+
+<!-- HERO SECTION -->
+<section id="inicio" class="hero">
+
+  <div class="hero-logo">
+    <img src="logo.png" alt="DemographIQ Logo">
+  </div>
+
+  <h1 id="tituloPrincipal" data-i18n="hero_title">
+    Analítica Demográfica Avanzada
+  </h1>
+
+  <p class="subtitulo" id="subtituloPrincipal" data-i18n="hero_description">
+    Proyecciones poblacionales del MERCOSUR mediante modelos de mínimos cuadrados y análisis predictivo.
+  </p>
+
+  <p class="typing" id="fraseAnimada" data-i18n="hero_tagline">
+    Modelamos el futuro con datos.
+  </p>
+
+  <a href="./pages/simulador.html" class="bubbles">
+    <span class="text" id="btnSimulador" data-i18n="hero_button">Probar Simulador</span>
+  </a>
+
+</section>
+
+
+<!-- MISIÓN -->
+<section class="intro">
+  <h2 id="tituloMision" data-i18n="mission_title">Nuestra misión</h2>
+
+  <p id="textoMision" data-i18n="mission_text">
+    En <strong>DemographIQ Analytics</strong> utilizamos modelos matemáticos y herramientas de ciencia de datos 
+    para analizar y proyectar el crecimiento poblacional de América del Sur. Nuestro objetivo es ofrecer 
+    predicciones claras y científicamente validadas para la planificación estratégica regional.
+  </p>
+</section>
+
+
+<!-- QUÉ HACEMOS -->
+<section class="extra">
+  <h2 id="tituloHacemos" data-i18n="whatwedo_title">Qué hacemos</h2>
+
+  <p id="textoHacemos" data-i18n="whatwedo_text">
+    Desarrollamos modelos predictivos, visualizaciones interactivas y simuladores web accesibles para 
+    gobiernos, instituciones educativas y empresas que buscan comprender y planificar el crecimiento poblacional 
+    en el MERCOSUR.
+  </p>
+</section>
+
+
+<!-- FOOTER -->
+<footer>
+  <p id="footerTexto" data-i18n="footer_text">
+    © 2025 DemographIQ Analytics | Proyecto académico
+  </p>
+</footer>
+
+
+</body>
+</html>
